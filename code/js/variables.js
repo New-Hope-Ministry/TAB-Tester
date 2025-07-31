@@ -1,4 +1,4 @@
-const dateEdited = '7-21-2025';
+const dateEdited = '7-31-2025';
 
 var allLoaded = false;
 var bookSort = false;
