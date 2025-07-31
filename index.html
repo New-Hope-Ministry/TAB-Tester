@@ -19,7 +19,13 @@
      <script async src="code/js/index.js"></script>
      <script defer src="code/js/lateload.js"></script>
      <script defer src="code/js/searcher.js"></script>
-
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById('id-copyrighted').textContent = copyrighted;
+            }, 200);
+        });
+    </script>
 </head>
 
 <body>
@@ -157,7 +163,7 @@
                </div>
 
                <br>
-               <a  onclick="aClick('https://bibleask.org/')" target="_blank" class="cs-chat">
+               <a onclick="aClick('https://bibleask.org/')" target="_blank" class="cs-chat">
                     BibleAsk AI Research Tool and Chat Bot
                </a>
                <br id="id-brListen">
@@ -178,7 +184,7 @@
                     <div>If you prefer to read older Bible versions, please feel free to do so.</div>
                     <br>
                     <a href="license.html" class="cs-copyright">
-                         <span>Copyright ©2024 New Hope Ministries </span>
+                         <span>Copyright ©<span id="id-copyrighted"></span> New Hope Ministries </span>
                          <span class="cs-copySign">●</span>
                          <span> MIT License </span>
                          <span class="cs-copySign">●</span>

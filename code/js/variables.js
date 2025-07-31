@@ -1,4 +1,5 @@
 const dateEdited = '7-31-2025';
+const copyrighted = '2018-2025';
 
 var allLoaded = false;
 var bookSort = false;

@@ -116,3 +116,5 @@ async function setFontSize() {
           if (ps.id !== 'id-endLine') { ps.style.fontSize = `${activeFontSize}rem`; };
      };
 };
+
+function aClick(ahref) { window.location.href = ahref; };

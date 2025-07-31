@@ -176,11 +176,7 @@ function readChronological() {
      console.log('test');
 };
 
-function aClick(ahref) {
-
-     window.location.href = ahref;
-     console.log('test');
-};
+function aClick(ahref) { window.location.href = ahref; };
 
 function readRandomChapter() {
 

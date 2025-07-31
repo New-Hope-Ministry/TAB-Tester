@@ -17,6 +17,13 @@
      <script async src="code/js/synth/synth.js"></script>
      <script defer src="code/js/synth/synthUtilities.js"></script>
      <script defer src="code/js/synth/synthLateLoad.js"></script>
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById('id-copyrighted').textContent = copyrighted;
+            }, 200);
+        });
+    </script>
 
 </head>
 
@@ -91,7 +98,7 @@
                     <div>If you prefer to read older Bible versions, please feel free to do so.</div>
                     <br>
                     <a href="license.html" class="cs-copyright">
-                         <span>Copyright ©2024 New Hope Ministries </span>
+                         <span>Copyright ©<span id="id-copyrighted"></span> New Hope Ministries </span>
                          <span class="cs-copySign">●</span>
                          <span> MIT License </span>
                          <span class="cs-copySign">●</span>

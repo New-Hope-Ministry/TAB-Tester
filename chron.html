@@ -13,6 +13,13 @@
      <script async src="code/js/variables.js"></script>
      <script async src="code/js/chron/chronUtilities.js"></script>
      <script async src="code/js/chron/chron.js"></script>
+     <script>
+          document.addEventListener("DOMContentLoaded", function () {
+               setTimeout(function () {
+                    document.getElementById('id-copyrighted').textContent = copyrighted;
+               }, 200);
+          });
+     </script>
 
 </head>
 
@@ -48,41 +55,31 @@
                <br><br><br><br><br>
                <div id="id-bottomTitleLine" class="cs-bottomLine"></div>
           </div>
-     </div>
-
-     <br><br>
-     <div class="cs-bottom">
-          <br>
-          <hr class="cs-hrCopyright">
           <br><br>
-
-          <div class="cs-GodLovesYou">
-               <div>
-                    <div>The chronological reading plan for The Ark Bible 365 Day Chronological Reading App</div>
-                    <div>comes from the Blue Letter Bible Daily Bible Reading Program Chronological Plan.</div>
-               </div>
-
-               <a class="cs-copyright" href="https://www.blueletterbible.org/assets/pdf/dbrp/1Yr_ChronologicalPlan.pdf">
-                    <span>Blue Letter Bible Chronological Reading Plan</span>
-               </a>
-          </div>
-
-          <br><br>
-          <div class="cs-GodLovesYou">
-               <div>God loves you, Jesus loves you, I love you, and this is God's free gift for you!</div>
-               <div>The TWF version is being actively edited and is subject to change daily.</div>
-               <div>If you prefer to read older Bible versions, please feel free to do so.</div>
-
-               <a href="license.html" class="cs-copyright">
-                    <span>Copyright ©2024 New Hope Ministries</span>
-                    <span class="cs-copySign">●</span>
-                    <span>MIT License </span>
-                    <span class="cs-copySign">●</span>
-                    <span> Public Domain</span>
-               </a>
+          <div class="cs-bottom">
+               <br>
+               <hr class="cs-hrCopyright">
                <br><br>
+               <div class="cs-GodLovesYou">
+                    <div class="cs-blueLtr">
+                         The chronological reading plan for The Ark Bible 365 Day Chronological Reading App comes from
+                         the Blue Letter Bible Daily Bible Reading Program Chronological Plan.
+                         <br>
+                         <a class="cs-blueLtrLink" a onclick="aClick('https://www.blueletterbible.org/assets/pdf/dbrp/1Yr_ChronologicalPlan.pdf')" target="_blank" href="">Blue
+                              Letter Bible Chronological Reading Plan</a>
+                    </div><br>
+                    <div>God loves you, Jesus loves you, I love you, and this is God's free gift for you!</div>
+                    <a href="license.html" class="cs-copyright">Copyright ©<span id="id-copyrighted"></span> New Hope
+                         Ministries <span class="cs-copySign">●</span> MIT License <span class="cs-copySign">●</span>
+                         Public
+                         Domain</a>
+                    <br><br>
+
+               </div>
           </div>
+
      </div>
+
 </body>
 
 <div id="id-chronVersions" class="cs-versions" translate="no"></div>
