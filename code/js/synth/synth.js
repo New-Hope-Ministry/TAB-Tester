@@ -75,9 +75,10 @@ function listVoices() {
 };
 
 function checkVoices() {
-
+let test
      let langElement = document.getElementById('id-languages');
      localVoices.forEach((voice) => {
+           test+= `${voice.lang}, `;
           for (let ii = 1; ii < langElement.children.length - 1; ii++) {
                if (langElement.children[ii].dataset.lngc === voice.lang) {
                     langElement.children[ii].dataset.keep = 1;
@@ -85,7 +86,7 @@ function checkVoices() {
                };
           };
      });
-
+alert(test);
      for (let ii = langElement.children.length - 2; ii >= 1; ii--) {
           if (!langElement.children[ii].dataset.keep) {
                langElement.removeChild(langElement.children[ii]);
