@@ -60,11 +60,9 @@ window.addEventListener("load", async () => {
 //let localVoices = [];
 function listVoices() {
 
-     let test = 'A';
      let avoice;
      voices = speechSynthesis.getVoices();
      if (voices) {
-
           voices.forEach((voice, index) => {
                if (voice) {
                     avoice = {
@@ -75,19 +73,16 @@ function listVoices() {
                     };
                     localVoices.push(avoice);
                     index++;
-                    test+= voice.lang;
                };
           });
-          alert(test);
      };
 };
 
 function checkVoices() {
-     let test = 'X';
+
      let langElement = document.getElementById('id-languages');
      localVoices.forEach((voice) => {
           if (voice.lang) {
-               test += `${voice.lang}, `;
                for (let ii = 1; ii < langElement.children.length - 1; ii++) {
                     if (langElement.children[ii].dataset.lngc === voice.lang) {
                          langElement.children[ii].dataset.keep = 1;
@@ -96,7 +91,6 @@ function checkVoices() {
                };
           };
      });
-     alert(test);
      for (let ii = langElement.children.length - 2; ii >= 1; ii--) {
           if (!langElement.children[ii].dataset.keep) {
                langElement.removeChild(langElement.children[ii]);
