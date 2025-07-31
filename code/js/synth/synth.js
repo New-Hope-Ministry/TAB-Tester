@@ -60,33 +60,43 @@ window.addEventListener("load", async () => {
 //let localVoices = [];
 function listVoices() {
 
+     let test = 'A';
      let avoice;
      voices = speechSynthesis.getVoices();
-     voices.forEach((voice, index) => {
-          avoice = {
-               idx: index,
-               name: voice.name,
-               lang: voice.lang,
-               default: voice.default
-          };
-          index++;
-          localVoices.push(avoice);
-     });
+     if (voices) {
+
+          voices.forEach((voice, index) => {
+               if (voice) {
+                    avoice = {
+                         idx: index,
+                         name: voice.name,
+                         lang: voice.lang,
+                         default: voice.default
+                    };
+                    localVoices.push(avoice);
+                    index++;
+                    test+= voice.lang;
+               };
+          });
+          alert(test);
+     };
 };
 
 function checkVoices() {
-let test
+     let test = 'X';
      let langElement = document.getElementById('id-languages');
      localVoices.forEach((voice) => {
-           test+= `${voice.lang}, `;
-          for (let ii = 1; ii < langElement.children.length - 1; ii++) {
-               if (langElement.children[ii].dataset.lngc === voice.lang) {
-                    langElement.children[ii].dataset.keep = 1;
-                    break;
+          if (voice.lang) {
+               test += `${voice.lang}, `;
+               for (let ii = 1; ii < langElement.children.length - 1; ii++) {
+                    if (langElement.children[ii].dataset.lngc === voice.lang) {
+                         langElement.children[ii].dataset.keep = 1;
+                         break;
+                    };
                };
           };
      });
-alert(test);
+     alert(test);
      for (let ii = langElement.children.length - 2; ii >= 1; ii--) {
           if (!langElement.children[ii].dataset.keep) {
                langElement.removeChild(langElement.children[ii]);
