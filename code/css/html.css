@@ -61,6 +61,12 @@ p { font-size: 1.06rem; }
 
 .cs-GodLovesYou { width: 80%; margin-left: auto; margin-right: auto; bottom: 0; font-size: .8rem; color: var(--whiteText); text-align: center; }
 .cs-GodLovesYouPages { color: var(--blackText); }
+
+.cs-copyright,
+.cs-copyright:visited { cursor: pointer; }
+
+.cs-copyright:hover { color: var(--paleMaroonEmphasis); }
+
 .cs-copySign { font-size: .75em; }
 .cs-bltr { display: block; position: relative; width: 95%; margin: auto; text-align: center; font-size: .9em; }
 

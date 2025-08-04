@@ -78,13 +78,6 @@ function closeLanguage(e = null) {
 
 };
 
-async function closeSave() {
-     const keys = await caches.keys();
-     await Promise.all(keys.map(key => caches.delete(key)));
-     document.getElementById('id-end').style.display = 'none';
-     localStorage.setItem("savedLocal", true);
-};
-
 function darkTheme() {
      document.documentElement.style.setProperty('--bodyBackground', '#3d3636');
      document.documentElement.style.setProperty('--bannerBackground', '#1a0303');

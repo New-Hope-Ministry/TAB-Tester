@@ -1,6 +1,6 @@
-const version = 19;
+const version = 20;
 var oldVersion = version - 1;
-// Change scope in index.html
+// Change scope in swkr.js
 
 const MAIN_CACHE = `ARK-cache-version: ${version}`;
 const OLD_MAIN_CACHE = `ARK-cache-version: ${oldVersion}`;

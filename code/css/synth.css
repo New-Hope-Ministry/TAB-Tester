@@ -7,11 +7,26 @@ body {
      width: 100%;
      height: 100%;
 }
-
 body {
      background-color: var(--bodyBackground);
      color: var(--blackText);
      z-index: 10;
+}
+.cs-loader {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     border: 8px solid var(--mediumGray);
+     border-top: 8px solid var(--bannerBackground);
+     border-radius: 50%;
+     width: 2em;
+     height: 2em;
+     animation: spin 2s linear infinite;
+}
+@keyframes spin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
 }
 .cs-header {
      position: fixed;
@@ -444,18 +459,6 @@ body {
      color: white;
 }
 .cs-edited { font-size: .4em; color: #545353; }
-.cs-loader {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     border: 8px solid var(--mediumGray);
-     border-top: 8px solid var(--bannerBackground);
-     border-radius: 50%;
-     width: 2em;
-     height: 2em;
-     animation: spin 2s linear infinite;
-}
 .cs-booksW {
      width: max-content;
 }

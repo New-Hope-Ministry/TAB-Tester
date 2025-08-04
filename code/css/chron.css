@@ -3,7 +3,22 @@ html,
 body { margin: 0; padding: 0; width: 100%; height: max-content; max-height: 100%; overflow: hidden; overflow-y: scroll; }
 body { background-color: var(--bodyBackground); color: var(--blackText); z-index: 10; }
 p { font-size: 1.06rem; }
-
+.cs-loader {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     border: 8px solid var(--mediumGray);
+     border-top: 8px solid var(--bannerBackground);
+     border-radius: 50%;
+     width: 2em;
+     height: 2em;
+     animation: spin 2s linear infinite;
+}
+@keyframes spin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
+}
 .cs-header {
      position: fixed;
      left: 0;
@@ -169,10 +184,10 @@ p { font-size: 1.06rem; }
 
 .cs-blueLtrLink,
 .cs-copyright,
-.cs-copyright:visited { color: var(--whiteText); }
+.cs-copyright:visited { color: var(--whiteText); text-decoration: underline;}
 
 .cs-blueLtrLink:hover,
-.cs-copyright:hover { color: var(--paleMaroonEmphasis); }
+.cs-copyright:hover { color: var(--paleMaroonEmphasis); cursor: pointer; }
 
 .cs-copySign { font-size: .75em; }
 .cs-verseNumber { margin-right: .5em;  color: var(--verseNumber); font-size: .9rem; font-weight: 550; z-index: 100; }

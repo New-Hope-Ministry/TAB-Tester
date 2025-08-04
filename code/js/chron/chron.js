@@ -8363,6 +8363,9 @@ window.addEventListener("load", async () => {
                toggleTheme();
                rotateTheme = false;
           };
+          setTimeout(() => {
+               document.getElementById("id-loader").style.display = 'none';
+          }, 130);
     };
     adjustPosition();
     window.addEventListener("resize", adjustPosition);

@@ -2,7 +2,7 @@ function adjustPosition() {
     locateBox('id-header1', 'id-chronVersions');
     locateBox('id-header1', 'id-chronDays');
     locateBox('id-header1', 'id-chronChapters');
-    locateBox('id-header1', 'id-pageContainer', -10);
+    locateBox('id-header1', 'id-pageContainer', -15);
 };
 
 function closeBoxes() {
