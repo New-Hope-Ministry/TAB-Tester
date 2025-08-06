@@ -584,14 +584,14 @@ body {
      justify-content: center;
      align-items: center;
 }
-
+.cs-copyright { text-decoration: underline; }
 .cs-copyright,
 .cs-copyright:visited {
-     cursor: pointer;
      color: var(--whiteText);
 }
 
 .cs-copyright:hover {
+     cursor: pointer;
      color: var(--paleMaroonEmphasis);
 }
 

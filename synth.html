@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<div id="id-loader" class="cs-loader"> </div>
+
 <head>
-     <base href="./">
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <base href="./">
      <title>Ark Bible speech synthesizer</title>
-     <link rel="icon" type="image/png" href="/images/icons/favicon-16.png">
+     <link rel="icon" type="image/png" href="images/icons/favicon-16.png">
 
      <link async rel="stylesheet" type="text/css" href="code/css/variables.css">
      <link async rel="stylesheet" type="text/css" href="code/css/synth.css">
@@ -28,7 +28,7 @@
 </head>
 
 <body>
-
+     <div id="id-loader" class="cs-loader"> </div>
      <div id="top"></div>
 
      <div id="id-header" class="cs-header" onclick="openBox(event)">
@@ -50,7 +50,7 @@
                </div>
           </div>
      </div>
-     
+
      <div id="id-synth" class="cs-synth">
           <div id="id-progressContainer" class="cs-progressContainer">
                <div id="id-progressBar" class="cs-progressBar"></div>
@@ -98,7 +98,10 @@
                     <div>If you prefer to read older Bible versions, please feel free to do so.</div>
                     <br>
                     <a href="license.html" class="cs-copyright">
-                         <span>Copyright ©<span id="id-copyrighted"></span> New Hope Ministries </span>
+                         <span>Copyright ©</span>
+                         <span id="id-copyrighted">2018-2025</span>
+                         <span class="cs-copySign">●</span>
+                         <span> New Hope Ministries </span>
                          <span class="cs-copySign">●</span>
                          <span> MIT License </span>
                          <span class="cs-copySign">●</span>
